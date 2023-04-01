@@ -10,8 +10,8 @@ const auth = (req,res,next)=>{
 
     try {
         var decoded = jwt.verify(token, process.env.secretKey);
-        if(decoded.userID){
-          req.body.userID = decoded.userID
+        if(req.body.userID = decoded.userID){
+          
           return  next()
         }else{
           res.status(400).send({msg:"Login required...!"})

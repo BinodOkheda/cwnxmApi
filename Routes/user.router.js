@@ -21,7 +21,7 @@ userRouter.post("/register", async (req,res)=>{
 
     } catch (error) {
         
-        res.status(400).json({msg:"User already exist, please login.."})
+        res.status(400).json({msg:error.message})
     }
 
 
